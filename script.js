@@ -6,15 +6,15 @@ toggle.addEventListener("click", () => {
     toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// Contact form validation
+// Contact form
 const form = document.querySelector("form");
 const message = document.getElementById("form-message");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const name = form.querySelector('input[type="text"]').value.trim();
-    const email = form.querySelector('input[type="email"]').value.trim();
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const email = form.querySelector('input[name="email"]').value.trim();
     const text = form.querySelector("textarea").value.trim();
 
     if (name === "" || email === "" || text === "") {
@@ -23,7 +23,23 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    message.textContent = "Thanks, " + name + "! Your message was sent.";
-    message.style.color = "green";
-    form.reset();
+    try {
+        const response = await fetch("https://formspree.io/f/xrppljpv", {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" }
+        });
+
+        if (response.ok) {
+            message.textContent = "Thanks, " + name + "! Your message was sent.";
+            message.style.color = "green";
+            form.reset();
+        } else {
+            message.textContent = "Something went wrong. Please try again.";
+            message.style.color = "red";
+        }
+    } catch (error) {
+        message.textContent = "Network error. Please try again.";
+        message.style.color = "red";
+    }
 });
