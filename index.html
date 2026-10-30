@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
    <header>
@@ -22,30 +23,73 @@
 </header>
 
 <section id="home">
-    <h1>Hello, I'm Faraji Gibson, a web developer.</h1>
-    <p>I build responsive websites using HTML, CSS and JavaScript.</p>
-    <a href="#projects" class="btn">View Projects</a>
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Hello, I'm Faraji Gibson, a web developer.</h1>
+            <p>I build responsive websites using HTML, CSS and JavaScript.</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+        <img src="images/profile.jpg" alt="Faraji Gibson" class="hero-img">
+    </div>
+
+    <div class="bubbles">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
 </section>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>I am a student at Institute of Accountants Arusha pursuing my degree in Cyber Security currently year two.
-        I have a passion for web development and enjoy creating user-friendly websites. I am constantly learning new technologies and improving my skills to stay up-to-date in the ever-evolving field of web development.
-    </p>
+    <div class="about-grid reveal">
+        <img src="images/profile2.jpg" alt="Faraji Gibson" class="about-img">
+        <div class="about-text">
+            <p>I am a student at Institute of Accountants Arusha pursuing my degree in Cyber Security currently year two. I have a passion for web development and enjoy creating user-friendly websites. I am constantly learning new technologies and improving my skills to stay up-to-date in the ever-evolving field of web development..</p>
+            <div class="stats">
+                <div><h3>1</h3><span>Live project</span></div>
+                <div><h3>3</h3><span>Core languages</span></div>
+                <div><h3>Daily</h3><span>Learning</span></div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="skills">
     <h2>Skills</h2>
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
+    <div class="skills-grid">
+        <div class="skill-bar reveal">
+            <div class="skill-info"><span>HTML</span><span>80%</span></div>
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-bar reveal">
+            <div class="skill-info"><span>CSS</span><span>70%</span></div>
+            <div class="bar"><div class="fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-bar reveal">
+            <div class="skill-info"><span>JavaScript</span><span>60%</span></div>
+            <div class="bar"><div class="fill" style="width:60%"></div></div>
+        </div>
+    </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-        <h3>Project One</h3>
-        <p>I am currently working on this project and it will ba completed soon and will be available for viewing as soon as possible.</p>
+    <div class="projects-grid">
+        <div class="project-card reveal">
+            <div class="project-icon">🌐</div>
+            <h3>Portfolio Website</h3>
+            <p>This website, built with HTML, CSS and JavaScript.</p>
+            <a href="#home" class="btn">View</a>
+        </div>
+        <div class="project-card reveal">
+            <div class="project-icon">🚧</div>
+            <h3>Project Two</h3>
+            <p>Coming soon. Currently in progress.</p>
+        </div>
+        <div class="project-card reveal">
+            <div class="project-icon">🚧</div>
+            <h3>Project Three</h3>
+            <p>Coming soon. Currently in progress.</p>
+        </div>
     </div>
 </section>
 
@@ -61,6 +105,11 @@
 </section>
 
 <footer>
+    <div class="socials">
+    <a href="https://github.com/gibsonfaraji17-star" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/__juice_thekid?rpxt=c3dsejViMzZjem1r" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/255620804328" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
     <p>© 2026 JUICE999. All rights reserved.</p>
 </footer> 
 <script src="script.js"></script>
