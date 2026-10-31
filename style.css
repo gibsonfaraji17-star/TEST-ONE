@@ -419,3 +419,43 @@ body.dark #skills, body.dark #contact { background: #121212; }
 .socials a:nth-child(1):hover { background: #24292e; }
 .socials a:nth-child(2):hover { background: #e4405f; }
 .socials a:nth-child(3):hover { background: #25d366; }
+.project-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.tags span {
+    background: #e6f0ff;
+    color: #0055cc;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #0077ff;
+    color: #0077ff;
+    margin-left: 8px;
+}
+
+.btn-outline:hover {
+    background: #0077ff;
+    color: white;
+}
+
+body.dark .tags span {
+    background: #2a3b55;
+    color: #9cc9ff;
+}
